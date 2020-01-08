@@ -35,7 +35,7 @@ jobs:
       stage: test_pyviz_comms
       env: DESC="dev test_flakes"
       before_install:
-        - sudo apt-get install python3.6
+        - sudo apt-get install python3
         - pip install pyctdev && doit miniconda_install && pip uninstall -y doit pyctdev
         - export PATH="$HOME/miniconda/bin:$PATH" && hash -r
         - conda config --set always_yes True
